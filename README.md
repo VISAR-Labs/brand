@@ -26,7 +26,7 @@ To build a simulation with a non-default brand, use the `--brands` option. For e
 grunt --brands=my-brand-name
 ```
 
-You can also run with a specific brand in the requirejs (nonminified) mode by using the `brand` query parameter. For example:
+You can also run with a specific brand in the unbuild (nonminified) mode by using the `brand` query parameter. For example:
 ```
 http://simulationURL.html?brand=my-brand-name
 ```
@@ -72,6 +72,15 @@ To put your own organization's name in the logo and About dialog, follow these s
   };
 ```
 * Copy your images over the existing images in `brand/simulations-4-knowledge/images`
+* Add your brand name to the list of `supportedBrands` in your simulation's package.json
+```
+  "phet": {
+    "supportedBrands": [
+      "phet",
+      "adapted-from-phet",
+      "simulations-4-knowledge"
+    ],
+```
 * Test the simulation by launching it in the browser with the query parameter
 ```
 ?brand=simulations-4-knowledge

@@ -1,4 +1,4 @@
-// Copyright 2019-2020, University of Colorado Boulder
+// Copyright 2019-2021, University of Colorado Boulder
 
 /**
  * Links for the AboutDialog, used in phet brand and phet-io brand since they are the same for both.
@@ -8,7 +8,7 @@
  * @author Chris Klusendorf (PhET Interactive Simulations)
  */
 
-import joistStrings from '../../joist/js/joist-strings.js';
+import joistStrings from '../../joist/js/joistStrings.js';
 import brand from './brand.js';
 
 const termsPrivacyAndLicensingString = joistStrings.termsPrivacyAndLicensing;
@@ -30,13 +30,13 @@ const getLinks = ( simName, locale ) => {
     },
     {
       text: translationCreditsLinkString,
-      url: 'http://phet.colorado.edu/translation-credits?simName=' + encodeURIComponent( simName ) + '&locale=' + encodeURIComponent( locale ),
+      url: `http://phet.colorado.edu/translation-credits?simName=${encodeURIComponent( simName )}&locale=${encodeURIComponent( locale )}`,
       tandemName: 'translationCreditsLinkText'
     },
     {
       text: thirdPartyCreditsLinkString,
-      url: 'http://phet.colorado.edu/third-party-credits?simName=' + encodeURIComponent( simName ) +
-           '&locale=' + encodeURIComponent( locale ) + '#' + simName,
+      url: `http://phet.colorado.edu/third-party-credits?simName=${encodeURIComponent( simName )
+      }&locale=${encodeURIComponent( locale )}#${simName}`,
       tandemName: 'thirdPartyCreditsLinkText'
     }
   ];
